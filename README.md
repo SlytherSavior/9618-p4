@@ -23,10 +23,8 @@ This repository contains fundamental implementations of various data structures 
    cd data-structures-implementation
  
 
-##🤝 Contributing
-
+## 🤝 Contributing
   Contributions are welcome! Please fork this repository and submit a pull request. 
 
-📜 License
-
+## 📜 License
 This project is license under the MIT License
