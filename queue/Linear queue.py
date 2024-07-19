@@ -20,7 +20,7 @@ create()
 def enqueue(): 
     global end_pointer,front_pointer,queue
     if end_pointer != len(queue) - 1 :
-        value = input("Enter the value of want to enter")
+        value = input("Enter the value of want to enter \n")
         queue[end_pointer + 1] = value
         end_pointer += 1 
         print(f'added {value} the queue is now {queue} ')
@@ -30,9 +30,11 @@ def enqueue():
 def rearrange(): 
     global queue,front_pointer,end_pointer
     while front_pointer != 0 : 
-        for i in range(0,len(queue)):
+        for i in range(0,len(queue) - 1):
             queue[i] = queue[i + 1]
-        front_pointer,end_pointer -= 1
+        front_pointer -= 1
+        end_pointer -= 1
+        queue[-1] = ''
 
 
 def dequeue(): 
@@ -44,7 +46,7 @@ def dequeue():
   
 
 while True: 
-    choice = int(input("Enter the task you want to perform \n 1 for enqueue \n 2 for dequeue \n 3 for leaving / exit"))
+    choice = int(input("Enter the task you want to perform \n 1 for enqueue \n 2 for dequeue \n 3 for leaving / exit \n"))
     if choice == 1 : 
         enqueue()
     elif choice == 2: 
