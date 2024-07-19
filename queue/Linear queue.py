@@ -27,6 +27,9 @@ def enqueue():
     else: 
         print(" Sorry the queue is already full ( As it is a linear queue so no more added )")
 
+
+# defining function to rearrange the queue after dequeing a value
+
 def rearrange(): 
     global queue,front_pointer,end_pointer
     while front_pointer != 0 : 
@@ -36,6 +39,7 @@ def rearrange():
         end_pointer -= 1
         queue[-1] = ''
 
+#defining the dequeue function
 
 def dequeue(): 
     global front_pointer,end_pointer,queue 
@@ -44,7 +48,7 @@ def dequeue():
     rearrange()
     print(queue)
   
-
+#infinite loop for the program 
 while True: 
     choice = int(input("Enter the task you want to perform \n 1 for enqueue \n 2 for dequeue \n 3 for leaving / exit \n"))
     if choice == 1 : 
