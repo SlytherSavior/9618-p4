@@ -1,3 +1,6 @@
+#This is implementation of stack in python without using OOP concepts
+
+
 # Initialize the maximum length of the stack
 max_length = 0 
 
