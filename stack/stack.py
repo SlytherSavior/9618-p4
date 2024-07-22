@@ -1,4 +1,4 @@
-#This is implementation of stack in python without using OOP concepts
+#This is implementation of stack in python without using OOP concepts or inbuilt methods
 
 
 # Initialize the maximum length of the stack
