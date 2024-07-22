@@ -4,14 +4,17 @@
 # Initialize the maximum length of the stack
 max_length = 0 
 
-# Function to create a stack with user-defined size
-def create():
-    global max_length
-    max_length  = int(input("Enter the size of the stack you want: "))
-
 # Initialize the stack and top pointer
 stack = []
-toppointer = 0
+toppointer = -1
+
+# Function to create a stack with user-defined size
+def create():
+    global max_length,stack
+    max_length  = int(input("Enter the size of the stack you want: "))
+    stack = ['' for x in range(max_length)]
+
+
 
 # Call the create function to set the stack size when the program starts
 create()
@@ -20,14 +23,14 @@ create()
 def push():
     global toppointer, stack
     val = input("Enter the string value you want to add in your stack:\n")
-    stack.append(val)  # Add the value to the stack
-    print(stack)  # Print the current state of the stack
     toppointer += 1  # Increment the top pointer
+    stack[toppointer] = val # Add the value to the stack
+    print(stack)  # Print the current state of the stack
 
 # Function to pop an element from the stack
 def pop():
     global toppointer, stack
-    stack.pop()  # Remove the last element from the stack
+    stack[toppointer] = ''  # Remove the last element from the stack
     toppointer -= 1  # Decrement the top pointer
     print("You have removed the last element from your stack.")
     print(stack)  # Print the current state of the stack
@@ -39,13 +42,13 @@ while True:
                             "Press 3 and enter if you want to quit: "))
     
     if user_choice == 1:
-        if toppointer < max_length:  # Check if the stack is not full
+        if toppointer < max_length - 1 : #Check if the stack is not full
             push()
         else:
             print("You have already reached max stack length.")
     
     elif user_choice == 2:
-        if toppointer > 0:  # Check if the stack is not empty
+        if toppointer >= 0:  # Check if the stack is not empty
             pop()
         else:
             print("There is no item to remove from the stack.")
