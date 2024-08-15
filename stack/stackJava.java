@@ -4,7 +4,7 @@ public class stackJava {
     // Initialize the maximum length of the stack
     static int maxLength = 0;
 
-    // Initialize the stack and top pointer
+    // Initialize the stack and top pointer , static variables cause we need them to be global
     static String[] stack;
     static int topPointer = -1;
 
@@ -14,6 +14,7 @@ public class stackJava {
         System.out.print("Enter the size of the stack you want: ");
         maxLength = scanner.nextInt();
         stack = new String[maxLength];
+        scanner.close();
     }
 
     // Function to push an element onto the stack
