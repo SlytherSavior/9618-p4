@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class StackImplementation {
+public class stackJava {
     // Initialize the maximum length of the stack
     static int maxLength = 0;
 
