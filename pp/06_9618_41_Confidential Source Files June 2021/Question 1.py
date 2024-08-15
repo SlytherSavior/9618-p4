@@ -50,7 +50,8 @@ def addNode(linkedList,startPointer,emptyList):
       previousPointer = startPointer
       startPointer = linkedList[startPointer].nextNode 
     linkedList[previousPointer].nextNode = emptyList
-    emptyList = tempNode.nextNode # ms prob here ? 
+    emptyList = linkedList[emptyList].nextNode # ms prob here ? 
+    print(emptyList)
     return True
 
 
