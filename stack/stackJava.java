@@ -14,7 +14,7 @@ public class StackJava {
         System.out.print("Enter the size of the stack you want: ");
         maxLength = scanner.nextInt();
         stack = new String[maxLength];
-        scanner.close();
+       
     }
 
     // Function to push an element onto the stack
@@ -25,7 +25,7 @@ public class StackJava {
         topPointer++;  // Increment the top pointer
         stack[topPointer] = val; // Add the value to the stack
         System.out.println(java.util.Arrays.toString(stack));  // Print the current state of the stack
-        scanner.close();
+        
     }
     
     // Function to pop an element from the stack
