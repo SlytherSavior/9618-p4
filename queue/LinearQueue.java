@@ -26,7 +26,7 @@ public class LinearQueue {
       String value = scanner.nextLine();
       queue[endPointer + 1 ] = value ;
       endPointer += 1 ; 
-      System.out.println("Added " + value + " the queue is now " + queue );
+      System.out.println("Added " + value + " the queue is now " + java.util.Arrays.toString(queue) );
     }else { 
       System.out.println("Sorry the queue is already full ( As it is a linear queue so no more added )");
     }
@@ -51,14 +51,38 @@ public class LinearQueue {
     queue[frontPointer] = "";
     frontPointer += 1; 
     rearrange();
-    System.out.println("queue");
+    System.out.println("You dequeued an element, the queue is now " + java.util.Arrays.toString(queue));
 
   }
 
   //now the main program 
 
   public static void main(String[] args){ 
-    
+    //call the create function to set queue size when the program starts
+    create();
+
+    Scanner scanner = new Scanner(System.in);
+    while(true) {
+      System.out.println("Enter the task you want to perform \n" +
+                " 1 for enqueue \n" + //
+                " 2 for dequeue \n" + //
+                " 3 for leaving / exit \n" + //
+                "");
+      int userChoice = scanner.nextInt();
+      if (userChoice == 1){ 
+        enqueue();
+      }else if(userChoice == 2) {
+        dequeue();
+      }else if(userChoice == 3) {
+        break;
+      }else { 
+        System.out.println("You chose "  + userChoice + " please choose a valid choice");
+      }
+
+    }
+    scanner.close();
+
+
   }
 
 

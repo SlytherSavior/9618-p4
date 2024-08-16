@@ -58,5 +58,5 @@ while True:
     elif choice == 3: 
         break
     else: 
-        print(f'You chose {choice}, please choose a vali d choice')
+        print(f'You chose {choice}, please choose a valid choice')
     
