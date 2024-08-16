@@ -14,6 +14,7 @@ This repository contains fundamental implementations of various data structures 
 ### Prerequisites
 
 - Python 3.x
+- Java version 20.0.1
 
 ### Running the Code
 
