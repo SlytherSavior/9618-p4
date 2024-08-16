@@ -7,12 +7,17 @@ public class LinearQueue {
   static int frontPointer = 0 ; 
   static int endPointer  = -1 ; 
 
+
+  //define method to create the queue
+
   public static void create(){ 
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the maximum size of the queue you want");
     maxLength = scanner.nextInt(); 
     queue = new String[maxLength];
   }
+
+  //define method to enqueue
 
   public static void enqueue(){ 
     Scanner scanner = new Scanner(System.in);
@@ -27,8 +32,34 @@ public class LinearQueue {
     }
   }
 
+  //define method to rearange the queue after dequeing a value
 
+  public static void rearrange(){ 
+    while(frontPointer != 0){ 
+      for(int i = 0 ; i < queue.length ; i++){ 
+        queue[i] = queue[i + 1];        
+      }
+      frontPointer -= 1 ; 
+      endPointer -= 1 ; 
+      queue[queue.length - 1] = "";
+    }
+  }
 
+  //defining the method to dequeue an element from the queue
+
+  public static void dequeue(){ 
+    queue[frontPointer] = "";
+    frontPointer += 1; 
+    rearrange();
+    System.out.println("queue");
+
+  }
+
+  //now the main program 
+
+  public static void main(String[] args){ 
+    
+  }
 
 
   
