@@ -5,6 +5,7 @@ end_pointer = -1
 queue = []
 
 
+
 #defining method to create the queue 
 def create(): 
     global max_length,front_pointer,end_pointer,queue   
@@ -41,13 +42,23 @@ def rearrange():
 
 #defining the dequeue function
 
-def dequeue(): 
-    global front_pointer,end_pointer,queue 
-    queue[front_pointer] = ''
-    front_pointer += 1 
-    rearrange()
-    print(queue)
-  
+def dequeue():
+    global front_pointer,queue,end_pointer
+    possible = True
+    for i in range(0,len(queue) - 1):
+        if queue[i] != '':
+            break
+        possible = False
+    if possible:
+        queue[front_pointer] = ''
+        front_pointer += 1
+        rearrange()
+        print("You dequeued an element, the queue is now", queue)
+    else:
+        print("Dequeue is not possible as all elements are null, please enqueue an element first")
+
+
+   
 #infinite loop for the program 
 while True: 
     choice = int(input("Enter the task you want to perform \n 1 for enqueue \n 2 for dequeue \n 3 for leaving / exit \n"))

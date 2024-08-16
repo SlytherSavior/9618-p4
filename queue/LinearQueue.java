@@ -36,22 +36,34 @@ public class LinearQueue {
 
   public static void rearrange(){ 
     while(frontPointer != 0){ 
-      for(int i = 0 ; i < queue.length ; i++){ 
+      for(int i = 0 ; i < queue.length - 1 ; i++){ 
         queue[i] = queue[i + 1];        
       }
       frontPointer -= 1 ; 
       endPointer -= 1 ; 
-      queue[queue.length - 1] = "";
+      queue[queue.length - 1] = null;
     }
   }
 
   //defining the method to dequeue an element from the queue
 
-  public static void dequeue(){ 
-    queue[frontPointer] = "";
-    frontPointer += 1; 
-    rearrange();
-    System.out.println("You dequeued an element, the queue is now " + java.util.Arrays.toString(queue));
+  public static void dequeue(){
+    Boolean possible = true ;
+    for(int i = 0 ; i < queue.length ; i++) { 
+      if(queue[i] != null){ 
+        break;
+      }
+      possible = false;
+    }  
+    if(possible) { 
+      queue[frontPointer] = null;
+      frontPointer += 1; 
+      rearrange();
+      System.out.println("You dequeued an element, the queue is now " + java.util.Arrays.toString(queue));
+    }else {
+      System.out.println("Dequeue is not possible as all elements are null , please enqueue an element first");
+    }
+    
 
   }
 
