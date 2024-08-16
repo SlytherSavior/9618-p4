@@ -1,6 +1,6 @@
 # 📚 Data Structures Implementation in Python 
 
-This repository contains fundamental implementations of various data structures in Python, tailored for A-Level Computer Science (9618 CAIE syllabus) students. These data structures include stacks, queues, linked lists, and more. The implementations illustrate key operations and ensure the structures work within user-defined constraints.
+This repository contains fundamental implementations of various data structures in Python as well as Java, tailored for A-Level Computer Science (9618 CAIE syllabus) students. These data structures include stacks, queues, linked lists, and more. The implementations illustrate key operations and ensure the structures work within user-defined constraints.
 
 ## 🌟 Features
 
