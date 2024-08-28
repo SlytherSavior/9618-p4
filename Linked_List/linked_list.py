@@ -23,10 +23,10 @@ def addNode(element):
     if free_pointer != -1 :
         linked_list[free_pointer].data = element
         newNodePlace = free_pointer
-        if free_pointer < (len(linked_list) -1):
-            free_pointer += 1
-        else: 
-            free_pointer = -1 
+        free_pointer = linked_list[free_pointer].pointer
+
+        #now wee need to place new node in the correct place 
+        
     else:
         print("The linkedList is already full")
     
