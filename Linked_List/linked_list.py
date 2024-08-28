@@ -19,9 +19,21 @@ initialize()
 
 #method to add element in linked list
 def addNode(element):
+    global linked_list,start_pointer,free_pointer 
+    if free_pointer != -1 :
+        linked_list[free_pointer].data = element
+        newNodePlace = free_pointer
+        if free_pointer < (len(linked_list) -1):
+            free_pointer += 1
+        else: 
+            free_pointer = -1 
+    else:
+        print("The linkedList is already full")
+    
    
 
 def printNodes():
+    print('hello world')
 
 
 
