@@ -12,3 +12,8 @@ free_pointer = 0
 
 linked_list = [Node() for x in range(int(input("Enter the maximum number of elements in your linked list")))]
         
+#now for the operations of linked_list
+
+def add_node(): 
+    #a function to add a node 
+    print('hello world')
