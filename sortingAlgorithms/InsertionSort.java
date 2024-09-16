@@ -11,7 +11,7 @@ public class InsertionSort {
           // Move elements greater than 'key' one position ahead
           while (j >= 0 && arr[j] > key) {
               arr[j + 1] = arr[j];
-              j = j - 1;
+              j -= 1 ; 
           }
           // Place 'key' in its correct position
           arr[j + 1] = key;
