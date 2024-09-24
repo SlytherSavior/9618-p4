@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class BubbleSortExample {
+public class BubbleSort {
     public static int[] bubbleSort(int[] dataArr) {
         int topPointer = dataArr.length - 2;
         while (topPointer > 0) {
