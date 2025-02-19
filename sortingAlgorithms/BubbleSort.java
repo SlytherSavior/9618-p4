@@ -22,3 +22,4 @@ public class BubbleSort {
         int[] sortedArr = bubbleSort(dataArr);
         System.out.println(Arrays.toString(sortedArr));
     }
+}

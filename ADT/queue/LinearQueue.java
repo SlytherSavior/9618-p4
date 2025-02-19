@@ -6,21 +6,21 @@ public class LinearQueue {
   static int maxLength = 0; 
   static int frontPointer = 0 ; 
   static int endPointer  = -1 ; 
+  static Scanner scanner = new Scanner(System.in);
 
 
   //define method to create the queue
 
   public static void create(){ 
-    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the maximum size of the queue you want");
     maxLength = scanner.nextInt(); 
+    scanner.nextLine();
     queue = new String[maxLength];
   }
 
   //define method to enqueue
 
   public static void enqueue(){ 
-    Scanner scanner = new Scanner(System.in);
     if(endPointer != queue.length - 1){ 
       System.out.println("Enter the value of string you want to enter \n");
       String value = scanner.nextLine();
@@ -73,7 +73,6 @@ public class LinearQueue {
     //call the create function to set queue size when the program starts
     create();
 
-    Scanner scanner = new Scanner(System.in);
     while(true) {
       System.out.println("Enter the task you want to perform \n" +
                 " 1 for enqueue \n" + //
@@ -81,6 +80,7 @@ public class LinearQueue {
                 " 3 for leaving / exit \n" + //
                 "");
       int userChoice = scanner.nextInt();
+      scanner.nextLine();
       if (userChoice == 1){ 
         enqueue();
       }else if(userChoice == 2) {
@@ -90,7 +90,6 @@ public class LinearQueue {
       }else { 
         System.out.println("You chose "  + userChoice + " please choose a valid choice");
       }
-
     }
     scanner.close();
 
