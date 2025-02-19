@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class StackJava {
+    static Scanner scanner = new Scanner(System.in);
     // Initialize the maximum length of the stack
     static int maxLength = 0;
 
@@ -10,7 +11,7 @@ public class StackJava {
 
     // Function to create a stack with user-defined size
     public static void create() {
-        Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Enter the size of the stack you want: ");
         maxLength = scanner.nextInt();
         stack = new String[maxLength];
@@ -19,7 +20,7 @@ public class StackJava {
 
     // Function to push an element onto the stack
     public static void push() {
-        Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Enter the string value you want to add in your stack:\n");
         String val = scanner.nextLine();
         topPointer++;  // Increment the top pointer
@@ -41,7 +42,7 @@ public class StackJava {
         create();
         
         // Main loop to handle user inputs
-        Scanner scanner = new Scanner(System.in);
+        
         while (true) {
             System.out.print("\nPress 1 and enter if you want to add in your stack,\n"
             + "Press 2 and enter if you want to remove some element from your stack,\n"

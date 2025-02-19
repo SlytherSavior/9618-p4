@@ -37,7 +37,7 @@ public class LinkedList {
     static void addNode(String element) {
         if (freePointer != -1) {
             linkedList[freePointer].data = element;
-            int newNodePlace = freePointer;
+            // int newNodePlace = freePointer;
             freePointer = linkedList[freePointer].pointer;
 
             // Now we need to place new node in the correct place 
