@@ -1,7 +1,8 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CircularQueue {
-    static int maxLenght = 0;
+    static int maxLength = 0;
     static int frontPointer = 0;
     static int endPointer = -1;
     static String[] queue;
@@ -11,27 +12,46 @@ public class CircularQueue {
     // defining the create method
     public static void create() {
         System.out.println("Enter the maximum size of the queue you want");
-        maxLenght = scanner.nextInt();
-        queue = new String[maxLenght];
+        maxLength = scanner.nextInt();
+        queue = new String[maxLength];
     }
 
     public static void enQueue() {
-        if (noOfElements != maxLenght) {
+        if (noOfElements != maxLength) {
             System.out.println("Enter the data you want to add in the queue \n");
             int value = 0;
             try {
                 value = scanner.nextInt();
-                queue[endPointer] = Integer.toString(value);
+                queue[endPointer + 1] = Integer.toString(value);
+                noOfElements += 1;
             } catch (Exception e) {
                 System.out.println("An error occured, are you sure you entered an integer? ");
             }
-            endPointer = (endPointer + 1) % maxLenght;
-            System.out.println("Value " + value + " is added the queue is now: " + java.util.Arrays.toString(queue));
+            endPointer = (endPointer + 1) % maxLength;
+            System.out.println("Value " + value + " is added the queue is now: " + Arrays.toString(queue));
 
+        } else {
+            System.out.println(" The  queue is now full you cannot add any more values");
+        }
+    }
+
+    public static void deQueue() {
+        if (noOfElements != 0) {
+            String value = queue[frontPointer];
+            queue[frontPointer] = " ";
+
+            frontPointer = ((frontPointer + 1) % maxLength);
+            noOfElements -= 1;
+            System.out.println("Removed " + value + " the queue is now " + Arrays.toString(queue));
+        } else {
+            System.out.println(" The queue is empty , what are you even trying to remove lol");
         }
     }
 
     public static void main(String[] args) {
+        create();
+        enQueue();
+        deQueue();
 
     }
 }
