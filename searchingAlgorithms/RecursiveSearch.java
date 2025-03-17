@@ -33,19 +33,15 @@ public class RecursiveSearch {
             arr[i] = value;
         }
         System.out.println("The array you have generated is " + Arrays.toString(arr));
-
         System.out.println("Enter the value you want to search");
-
         int searchVal = scanner.nextInt();
-
         int index = BinarySearch(arr, searchVal, 0, length - 1);
         if (index == -1) {
             System.out.println("Sorry the value does not exist in the array");
         } else {
             System.out.println("The value is in the position " + index);
         }
-
         scanner.close();
-
     }
+
 }
