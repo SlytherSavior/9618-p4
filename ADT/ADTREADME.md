@@ -28,9 +28,6 @@ This repository provides comprehensive implementations and explanations of Abstr
   - Insertion ( Ordered Insertion )
   - Deletion operations
 
-### 2. Searching Algorithms
-- Binary Search (Recursive implementation)
-- Linear Search
 
 
 
@@ -48,9 +45,8 @@ This repository provides comprehensive implementations and explanations of Abstr
    cd 9618-p4
    ```
 
-2. Choose your preferred language directory:
-   - `/python` for Python implementations
-   - `/java` for Java implementations
+2. Go to adt director:
+   - `cd ADT/` for Python implementations
 
 ## 📝 Paper 4 Examination Tips
 
